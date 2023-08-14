@@ -1,0 +1,7 @@
+{
+  "name": "MiAplicacion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
