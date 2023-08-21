@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Información</h1>
+  <label>Nombre:</label>
+  <ion-input type="text" placeholder="Ingrese Nombre"></ion-input>
+  <ion-input type="text" label="Apellido" placeholder="Ingrese su apellido"></ion-input>
+  <ion-input type="number" label="Edad" placeholder="Edad"></ion-input>
+  <ion-input type="email" label="Email" placeholder="Email"></ion-input>
+  <ion-input type="email" 
+              label="Email" 
+              labelPlacement="floating" 
+              helperText="Ingrese correo válido"
+              errorText="El correo no es correcto"
+              ngModel
+              email
+              ></ion-input>
+  <ion-input type="password" label="Clave" placeholder="****"></ion-input>
+  <ion-input label="Dirección" labelPlacement="stacked" placeholder="Americo Vespucio 1501"></ion-input>
+  <ion-input label="Carrera" labelPlacement="floating" placeholder="Párvulo"></ion-input>
+  <ion-input label="Jornada" labelPlacement="stacked" [clearInput]="true"></ion-input>
+  <ion-input labelPlacement="floating" placeholder="Sede" [counter]="true" maxlength="30" ></ion-input>
+  <ion-input type="text" placeholder="Valor Carrera" fill="solid" ></ion-input>
+  <ion-input type="text" placeholder="Valor mensual" fill="outline" ></ion-input>
+
+
+
+
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    Inputs
+  </ion-toolbar>
+</ion-footer>

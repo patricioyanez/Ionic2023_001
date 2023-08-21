@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'uno',
     loadChildren: () => import('./uno/uno.module').then( m => m.UnoPageModule)
   },
+  {
+    path: 'tres',
+    loadChildren: () => import('./tres/tres.module').then( m => m.TresPageModule)
+  },
 ];
 
 @NgModule({
