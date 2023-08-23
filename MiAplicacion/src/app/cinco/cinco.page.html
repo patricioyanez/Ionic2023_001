@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cinco</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button id="present-alert">Alerta</ion-button>
+  <ion-alert trigger="present-alert" 
+              header="Ejemplo de alerta"
+              subHeader="Mensaje importante"
+              message="Esta es una alerta de ejemplo."
+              [buttons]="alertButtons"></ion-alert>
+
+
+</ion-content>
