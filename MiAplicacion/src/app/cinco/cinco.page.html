@@ -12,5 +12,16 @@
               message="Esta es una alerta de ejemplo."
               [buttons]="alertButtons"></ion-alert>
 
+  <ion-button (click)="alerta()" expand="block" fill="clear" shape="round">alertar</ion-button>
+  <ion-label>El valor del numero es: {{ numero2 }}</ion-label>
+  <br>
+  <ion-button (click)="incrementar()">
+    <ion-icon slot="start" name="add"></ion-icon>
+    Aumentar
+  </ion-button>
+  <ion-label>valor actual: {{ numero }}</ion-label>
 
+  <!-- 
+    row / col
+  -->
 </ion-content>
