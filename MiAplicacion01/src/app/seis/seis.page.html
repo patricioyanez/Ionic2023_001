@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>seis</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">Datos del usuario</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Nombre:</ion-col>
+      <ion-col size="9">{{ nombre }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Edad:</ion-col>
+      <ion-col size="9">{{ edad }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">Mensaje:</ion-col>
+      <ion-col size="9">{{ nombre }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="mostrarDatos()" expand="block">
+          <ion-icon slot="icon-only" name="eye-outline" *ngIf="!permitir"></ion-icon>
+          <ion-icon slot="icon-only" name="eye-off-outline" *ngIf="permitir"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-text color="primary" *ngIf="permitir && true; else noHayDatos">
+    <h1 class="ion-text-center">Promedio de notas</h1>
+    <ion-item *ngFor="let asignatura of asignaturas">
+      <ion-label>{{asignatura.nombre | titlecase }}</ion-label> <!--uppercase/lowercase,  slice:0:12 -->
+      <ion-label>{{asignatura.nombre | slice:0:6 }}</ion-label>
+      <ion-label>{{asignatura.nota | number: '1.0-0' }}</ion-label>
+    </ion-item>
+  </ion-text>
+  <ng-template #noHayDatos>
+    <ion-text color="danger" class="ion-text-center">
+      <h3>No hay acceso a las asignaturas</h3>
+    </ion-text>
+  </ng-template>
+  <!-- angular pipes https://angular.io/guide/pipes -->
+</ion-content>

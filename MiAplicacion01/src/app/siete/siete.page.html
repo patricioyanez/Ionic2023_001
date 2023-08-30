@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>siete</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button><ion-icon name="ellipsis-horizontal-outline"></ion-icon></ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button defaultHref="menu"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="remove-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="medical-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="create-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button href="https://www.google.cl"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+<!-- enviar a otra pagina con fab -->
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
