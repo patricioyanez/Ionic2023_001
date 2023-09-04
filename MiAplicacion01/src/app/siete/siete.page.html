@@ -8,16 +8,58 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-text color="primary">
+    <h1>Directiva UNIdireccional</h1>
+    <input type="text" [ngModel]="nombre">
+  </ion-text>
+  <ion-text color="primary">
+    {{nombre}}
+  </ion-text>
+
+  <ion-text color="primary">
+    <h1>Directiva BIdireccional</h1>
+    <input type="text" [(ngModel)]="apellidoPaterno">
+  </ion-text>
+  <ion-text color="primary">
+    {{apellidoPaterno}}
+  </ion-text>
+
+  <h1>Ejercicios: Sumar 2 números y mostrar el resultado. Usar botón</h1>
+  <h1>Suma de números</h1>
+  <ion-item>
+    <ion-label>Número 1:</ion-label><input type="number" [(ngModel)]="n1">
+  </ion-item>
+  <ion-item>
+    <ion-label>Número 2:</ion-label><input type="number" [(ngModel)]="n2">
+  </ion-item>
+  <ion-button (click)="sumar()" expand="block">
+    <ion-icon slot="icon-only" name="add"></ion-icon>Sumar
+  </ion-button>
+  <ion-button (click)="limpiar()" expand="block">
+    <ion-icon slot="icon-only" name="trash"></ion-icon>Limpiar
+  </ion-button>
+  <ion-item *ngIf="resultado">
+    <ion-label>Total: {{resultado}}</ion-label>
+  </ion-item>
+  <h1>Crear las operaciones aritmeticas *,/ y -, 
+    validando los numero enviado mensaje adecuado</h1>
+
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button><ion-icon name="ellipsis-horizontal-outline"></ion-icon></ion-fab-button>
-    <ion-fab-list side="top">
-      <ion-fab-button defaultHref="menu"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+    <ion-fab-button color="success"><ion-icon name="menu-outline"></ion-icon></ion-fab-button>
+    <ion-fab-list side="top"> <!-- arriba -->
+      <ion-fab-button href="menu" class="botoncito"><ion-icon name="grid-outline"></ion-icon></ion-fab-button>
       <ion-fab-button><ion-icon name="remove-outline"></ion-icon></ion-fab-button>
       <ion-fab-button><ion-icon name="medical-outline"></ion-icon></ion-fab-button>
       <ion-fab-button><ion-icon name="create-outline"></ion-icon></ion-fab-button>
       <ion-fab-button href="https://www.google.cl"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
       <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
-      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button color="primary"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start"> <!-- izquierda -->
+      <ion-fab-button href="https://ionicframework.com/"><ion-icon name="logo-ionic"></ion-icon></ion-fab-button>
+      <ion-fab-button href="https://www.angular.io" target="_blank"><ion-icon name="logo-angular"></ion-icon></ion-fab-button>
     </ion-fab-list>
   </ion-fab>
 <!-- enviar a otra pagina con fab -->
