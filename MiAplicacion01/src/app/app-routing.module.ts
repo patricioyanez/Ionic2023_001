@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'siete',
     loadChildren: () => import('./siete/siete.module').then( m => m.SietePageModule)
   },
+  {
+    path: 'ocho',
+    loadChildren: () => import('./ocho/ocho.module').then( m => m.OchoPageModule)
+  },
 ];
 
 @NgModule({

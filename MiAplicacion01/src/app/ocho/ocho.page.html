@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ocho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-text color="primary" class="ion-text-center">
+  <h1>Super Calculadora</h1>
+</ion-text>
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="4">Número 1</ion-col>
+    <ion-col size="8">
+      <input type="number" [(ngModel)]="n1">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">Número 2</ion-col>
+    <ion-col size="8">
+      <input type="number" [(ngModel)]="n2">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4">Resultado</ion-col>
+    <ion-col size="8">{{resultado}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="sumar()" expand="block">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="restar()" expand="block" color="warning">
+        <ion-icon slot="icon-only" name="remove"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="multiplicar()" expand="block" color="success">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="dividir()" expand="block" color="medium">
+        <ion-icon slot="icon-only" name="pencil"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
