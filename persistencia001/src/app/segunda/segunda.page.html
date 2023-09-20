@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>segunda</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-text color="primary" *ngIf="valorParametro">
+  <h1>Valor recibido por la URL es:
+    {{valorParametro}}</h1>
+</ion-text>
+
+</ion-content>
