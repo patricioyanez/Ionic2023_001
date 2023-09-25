@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tercera-detalle',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tercera-detalle.page.scss'],
 })
 export class TerceraDetallePage implements OnInit {
-  // Ejercicio: Capturar el valor del idUsuario
+
   personas = [
     {
       id    : 1,
@@ -29,9 +30,16 @@ export class TerceraDetallePage implements OnInit {
 
     }
   ]
-  constructor() { }
+  persona : any;
+  constructor(private activated:ActivatedRoute) { }
 
   ngOnInit() {
+    // Ejercicio 1: Capturar el valor del idUsuario
+    this.activated.paramMap.subscribe(p =>{
+      const id = Number(p.get('idUsuario'));
+      this.persona = this.personas.find(x=> {return x.id == id});
+    });
+    // Ejercicio 2: Mostrar los datos del usuario usando card
   }
 
 }
