@@ -8,10 +8,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SegundaPage implements OnInit {
   valorParametro:any;
+  valorParametro2:any;
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.valorParametro = this.route.snapshot.paramMap.get("numerito");
+
+    this.route.paramMap.subscribe(params =>{
+      this.valorParametro2 = params.get("id");
+    })
+
   }
 
 }

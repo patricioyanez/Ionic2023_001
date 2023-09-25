@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'segunda',
     loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
   },
+  {
+    path: 'segunda/:id',
+    loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
+  },
 ];
 
 @NgModule({
