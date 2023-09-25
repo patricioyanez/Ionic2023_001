@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+    <!-- Ejercicio: crear la pagina de detalle mostrando toda la info de la persona -->
 <ion-card>
   <img src="{{persona.foto}}" alt="" srcset="">
   <ion-card-header>
@@ -20,4 +21,18 @@
     
   </ion-card-content>
 </ion-card>
+<!-- Ejercicio:
+  Agregar 2 botones para hacer match o no. Usar toast por si o alert por no -->
+  <ion-row>
+    <ion-col size="6">  
+      <ion-button (click)="si()" expand="block" color="success">
+        <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="no()" expand="block" color="danger">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>      
+    </ion-col>
+  </ion-row>
 </ion-content>

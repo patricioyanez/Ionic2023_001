@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tercera-detalle',
@@ -31,7 +32,10 @@ export class TerceraDetallePage implements OnInit {
     }
   ]
   persona : any;
-  constructor(private activated:ActivatedRoute) { }
+  constructor(private activated:ActivatedRoute,
+              private toastController: ToastController,
+              private alertController: AlertController
+              ) { }
 
   ngOnInit() {
     // Ejercicio 1: Capturar el valor del idUsuario
@@ -40,6 +44,27 @@ export class TerceraDetallePage implements OnInit {
       this.persona = this.personas.find(x=> {return x.id == id});
     });
     // Ejercicio 2: Mostrar los datos del usuario usando card
+  }
+  
+  async si()
+  {
+      const toast = await this.toastController.create({
+        message: 'Te agrado esta persona',
+        icon: 'checkmark-circle-outline',
+        duration: 2000
+      });
+      toast.present();
+  }
+  async no()
+  {
+      const alert = await this.alertController.create({
+        header: 'Atención',
+        subHeader: 'Mensaje importante',
+        message: 'No te agrado esta persona.',
+        buttons: ['Aceptar']
+      });
+    
+      await alert.present();
   }
 
 }
