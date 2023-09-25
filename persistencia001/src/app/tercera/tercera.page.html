@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tercera</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let persona of personas" [routerLink]="['/tercera-detalle/' + persona.id]">
+    <ion-avatar slot="start">
+      <img [src]="persona.foto" />
+    </ion-avatar>
+    <ion-label>{{persona.nombre}}</ion-label>
+  </ion-item>
+</ion-content>
