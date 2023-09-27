@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cuarta</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  Ejercicio 1: 2 input para el id y nombre<br>
+  id:
+  <ion-input type="number" [(ngModel)]="id"></ion-input><br>
+  Nombre:
+  <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+
+  <ion-button (click)="agregar()">
+    <ion-icon slot="icon-only" name="add"></ion-icon>
+  </ion-button>
+</ion-content>
