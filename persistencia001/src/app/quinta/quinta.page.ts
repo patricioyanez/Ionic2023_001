@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from './crud.service';
 
 @Component({
   selector: 'app-quinta',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quinta.page.scss'],
 })
 export class QuintaPage implements OnInit {
-
-  constructor() { }
+  persona: any = [];
+  constructor(private crud: CrudService) { }
 
   ngOnInit() {
   }
