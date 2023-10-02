@@ -12,5 +12,8 @@ export class QuintaPage implements OnInit {
 
   ngOnInit() {
   }
-
+  async agregar()
+  {
+    await this.crud.guardar(this.persona.rut, this.persona);
+  }
 }

@@ -9,9 +9,9 @@
 
 <ion-content [fullscreen]="true">
   <h1>Ejercicio 1: </h1>
-  <h2>Crear formulario que permita guardar: 
+  <h5>Crear formulario que permita guardar: 
     rut, nombre, dirección, correo, 
-    telefono, año nacimiento</h2>
+    telefono, año nacimiento</h5>
     <ion-item>
       <ion-label position="floating">Rut</ion-label>
       <ion-input type="text" [(ngModel)]="persona.rut"></ion-input>
@@ -37,4 +37,13 @@
       <ion-input type="text" [(ngModel)]="persona.anioNacimiento"></ion-input>
     </ion-item>
 
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+      <ion-fab-list side="start">
+        <ion-fab-button (click)="agregar()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon name="remove-outline"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon name="search-outline"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon name="list-outline"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
 </ion-content>
