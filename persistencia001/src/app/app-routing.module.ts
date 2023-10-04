@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'quinta',
     loadChildren: () => import('./quinta/quinta.module').then( m => m.QuintaPageModule)
   },
+  {
+    path: 'quintalistado',
+    loadChildren: () => import('./quintalistado/quintalistado.module').then( m => m.QuintalistadoPageModule)
+  },
 ];
 
 @NgModule({
