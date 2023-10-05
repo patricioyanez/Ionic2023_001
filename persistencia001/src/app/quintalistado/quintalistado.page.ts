@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from '../quinta/crud.service';
+
 
 @Component({
   selector: 'app-quintalistado',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quintalistado.page.scss'],
 })
 export class QuintalistadoPage implements OnInit {
+  personas:any = [];
+  constructor(private crud: CrudService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {    
+    this.crud.listar().then(x=> {this.personas = x;}) ;
   }
 
 }

@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-item *ngFor="let persona of personas">
+   <ion-item *ngFor="let persona of personas" [routerLink]="['/quinta/'+ persona.rut]" >
     <ion-label>{{persona.rut}}</ion-label>
     <ion-label>{{persona.nombre}}</ion-label>
     <ion-label>{{persona.direccion}}</ion-label>
-  </ion-item> -->
+  </ion-item>
 </ion-content>
