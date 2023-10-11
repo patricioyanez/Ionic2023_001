@@ -50,6 +50,33 @@ export class QuintaPage implements OnInit {
   {
     this.persona = [];
   }
+  async leer()
+  {
+    if(!this.persona.rut)
+      this.mensajeError('Falta rut');
+    else
+    {
+      await this.crud.leer(this.persona.rut).then(x => { this.persona = x } )
+
+      if(!this.persona)
+      {
+        this.mensajeError("Rut no encontrado");
+        this.persona = [];
+      }
+    }
+  }
+  eliminar()
+  {
+    if(!this.persona.rut)
+      this.mensajeError('Falta rut');
+    else
+    {
+      this.crud.eliminar(this.persona.rut);
+      this.mensajeExito("Solicitud realizada")
+      this.persona = []
+    }
+  }
+
   async mensajeError(mensaje: string)
   {
     const x = await this.toast.create({

@@ -8,6 +8,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <h1>Ejercicio 5</h1>
+  <h2>agregar click para ver todos los datos en la pagina quinta</h2>
+  <h1 *ngIf="!personas.length">No hay registros</h1>
   <ion-item *ngFor="let persona of personas" [routerLink]="['/tercera-detalle/' + persona.id]">
     <ion-avatar slot="start">
       <img [src]="persona.foto" />
