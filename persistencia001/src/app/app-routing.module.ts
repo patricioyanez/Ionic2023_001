@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'quintalistado',
     loadChildren: () => import('./quintalistado/quintalistado.module').then( m => m.QuintalistadoPageModule)
   },
+  {
+    path: 'sexta',
+    loadChildren: () => import('./sexta/sexta.module').then( m => m.SextaPageModule)
+  },
 ];
 
 @NgModule({
