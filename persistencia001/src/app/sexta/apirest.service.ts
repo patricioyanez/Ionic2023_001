@@ -16,4 +16,12 @@ export class ApirestService {
         subscribe((data=[]) => {this.listado = data;})
     return this.listado;
   }
+  async getUserPosts(id: string)
+  {
+    this.listado = []; 
+    const url = this.urlBaseAPI + 'users/' + id + '/posts';
+    await this.http.get(url).
+        subscribe((data=[]) => {this.listado = data;})
+    return this.listado;
+  }
 }
