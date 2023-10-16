@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApirestService } from './apirest.service';
 
 @Component({
   selector: 'app-sexta',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sexta.page.scss'],
 })
 export class SextaPage implements OnInit {
-
-  constructor() { }
+  usuarios : any = [];
+  constructor(private api: ApirestService) { }
 
   ngOnInit() {
+    this.listar();
   }
-
+  async listar()
+  {
+    this.usuarios = await this.api.getUsers();
+  }
 }
