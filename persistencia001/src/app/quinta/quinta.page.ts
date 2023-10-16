@@ -18,8 +18,10 @@ export class QuintaPage implements OnInit {
 
   ngOnInit() {
     this.activated.paramMap.subscribe(p =>{
-      const rut = p.get('rut')??'';
-      this.crud.leer(rut).then(x => {this.persona = x});
+      const id = p.get('rut')??'';
+      this.persona = [];
+      if(id)
+        this.crud.leer(id).then(x => this.persona = x);
     });
   }
   async agregar()
