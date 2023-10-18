@@ -7,23 +7,20 @@ import { Injectable } from '@angular/core';
 export class ApirestService {
   private urlBaseAPI = 'https://jsonplaceholder.typicode.com/';
   listado : any = [];
+  listado2 : any = [];
   constructor(private http: HttpClient) { }
 
-  async getUsers()
+  getUsers()
   {
     const url = this.urlBaseAPI + 'users';
-    await this.http.get(url).
-        subscribe((data=[]) => {this.listado = data;})
+    this.http.get(url).subscribe((data=[]) => {this.listado = data;})
     return this.listado;
   }
-  async getUserPosts(id: string)
+  getUserPosts(id: string)
   {
-    this.listado = []; 
+    this.listado2 = []; 
     const url = this.urlBaseAPI + 'users/' + id + '/posts';
-    this.http.get(url).
-        subscribe((data=[]) => {this.listado = data;
-        })
-    
-    return this.listado;
+    this.http.get(url).subscribe((data=[]) => {this.listado2 = data;})    
+
   }
 }
