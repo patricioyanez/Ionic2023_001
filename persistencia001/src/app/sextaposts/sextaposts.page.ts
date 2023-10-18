@@ -9,20 +9,23 @@ import { ApirestService } from '../sexta/apirest.service';
 })
 export class SextapostsPage implements OnInit {
   posts :any = [];
+  id : string = '';
   constructor(private activated: ActivatedRoute,
-              private api: ApirestService) { }
+              private api: ApirestService) { 
 
-  ngOnInit() {
-    this.listar();
-    this.listar();
-    
   }
-  async listar()
+
+  ngOnInit() { 
+      this.activated.paramMap.subscribe(p =>{
+        this.id = p.get('id')??'';             
+        this.api.getUserPosts(this.id);
+      }); 
+  }
+  ionViewDidEnter()
   {
-    this.activated.paramMap.subscribe(p =>{
-      const id = p.get('id')??'';
-      this.posts = this.api.getUserPosts(id).then(x => {this.posts = x});
-    });
-    
+    this.posts = this.api.listado;
   }
+
+  // Ejercicio 17: desplegar los comentarios del post
+  // seleccionado por el usuario
 }

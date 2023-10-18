@@ -20,8 +20,10 @@ export class ApirestService {
   {
     this.listado = []; 
     const url = this.urlBaseAPI + 'users/' + id + '/posts';
-    await this.http.get(url).
-        subscribe((data=[]) => {this.listado = data;})
+    this.http.get(url).
+        subscribe((data=[]) => {this.listado = data;
+        })
+    
     return this.listado;
   }
 }
