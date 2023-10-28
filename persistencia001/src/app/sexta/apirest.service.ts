@@ -23,4 +23,9 @@ export class ApirestService {
     this.http.get(url).subscribe((data=[]) => {this.listado2 = data;})    
 
   }
+
+  // npm install -g json-server
+  // crear y guardar un archivo con contenido json
+  // nombrar el archivo: archivo.json
+  // json-server --watch archivo.json
 }

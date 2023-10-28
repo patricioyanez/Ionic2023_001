@@ -1,17 +1,51 @@
 {
-    "mensaje":
-    [
-        {"id":1, "asunto": "Test de Json Server1", "cuerpo": "prueba 1" },
-        {"id":2, "asunto": "Test de Json Server2", "cuerpo": "prueba 2" },
-        {"id":3, "asunto": "Test de Json Server3", "cuerpo": "prueba 3" },
-        {"id":4, "asunto": "Test de Json Server4", "cuerpo": "prueba 4" },
-        {"id":5, "asunto": "Test de Json Server5", "cuerpo": "prueba 5" }
-    ],
-    "usuario":
-    [
-        {"id": 1, "nombre":"juan", "apellido":"Diaz"},
-        {"id": 2, "nombre":"ana", "apellido":"arce"},
-        {"id": 3, "nombre":"luis", "apellido":"aros"}
-    ]
-    
+  "mensaje": [
+    {
+      "id": 1,
+      "asunto": "Test de Json Server1",
+      "cuerpo": "prueba 1"
+    },
+    {
+      "id": 2,
+      "asunto": "Test de Json Server2",
+      "cuerpo": "prueba 2"
+    },
+    {
+      "id": 3,
+      "asunto": "Test de Json Server3",
+      "cuerpo": "prueba 3"
+    },
+    {
+      "id": 4,
+      "asunto": "Test de Json Server4",
+      "cuerpo": "prueba 4"
+    },
+    {
+      "id": 5,
+      "asunto": "Test de Json Server5",
+      "cuerpo": "prueba 5"
+    },
+    {
+      "asunto": "prueba desde postman",
+      "cuerpo": "dato guardado exitosamente via postman",
+      "id": 6
+    }
+  ],
+  "usuario": [
+    {
+      "id": 1,
+      "nombre": "juan",
+      "apellido": "Diaz"
+    },
+    {
+      "id": 2,
+      "nombre": "ana",
+      "apellido": "arce"
+    },
+    {
+      "id": 3,
+      "nombre": "luis",
+      "apellido": "aros"
+    }
+  ]
 }
