@@ -19,9 +19,17 @@ export class SeptimaPage implements OnInit {
   dividir(n1:number, n2:number)
   {
     if(n2 == 0)
-      return -1;
+      return 0;
     return n1/n2;
   }
   // crear 4 pruebas más
   // agregar metodos multiplicar y restar 
+  multiplicar(n1:number, n2:number)
+  {
+   return n1*n2; 
+  }
+  restar(n1:number, n2:number)
+  {
+   return n1-n2; 
+  }
 }

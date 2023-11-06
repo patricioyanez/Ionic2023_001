@@ -16,6 +16,7 @@ describe('SeptimaPage', () => {
   });
 });
 */
+// https://www.youtube.com/watch?v=7E0tP7H550g&list=PLk2rufbc0DMqSIoJqCZdBfNYp9SGEMKam
 // instalar npm test
 describe('Septima pagina', () =>{
   let component : SeptimaPage;
@@ -35,5 +36,17 @@ describe('Septima pagina', () =>{
   it('División por cero', ()=>
   {
     expect(component.dividir(2,0)).toEqual(0);
+  })
+  it('multiplicar numeros positivos', ()=>
+  {
+    expect(component.multiplicar(10,2)).toEqual(20);
+  })
+  it('multiplicar por 1 numero negativo', ()=>
+  {
+    expect(component.multiplicar(-10,2)).toBeLessThan(0);
+  })
+  it('multiplicar 2 numeros negativos', ()=>
+  {
+    expect(component.multiplicar(-10,-2)).toBeGreaterThanOrEqual(0);
   })
 })
