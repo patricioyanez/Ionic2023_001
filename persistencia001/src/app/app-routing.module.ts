@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'septima',
     loadChildren: () => import('./septima/septima.module').then( m => m.SeptimaPageModule)
   },
+  {
+    path: 'octava',
+    loadChildren: () => import('./octava/octava.module').then( m => m.OctavaPageModule)
+  },
 ];
 
 @NgModule({
