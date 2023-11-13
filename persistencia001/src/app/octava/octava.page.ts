@@ -15,7 +15,7 @@ export class OctavaPage implements OnInit {
   }
   sumar()
   {
-    this.res = this.n1 + this.n2;
+    this.res = Number(this.n1) + Number(this.n2);
   }
 
 }

@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <input type="number" id="n1" [(ngModel)]="n1"><br>
-  <input type="number" id="n2" [(ngModel)]="n2"><br>
-  <input type="number" readonly="readonly" id="resultado" [(ngModel)]="res"><br>
-  <button (click)="sumar()">sumar</button>
+  <input type="text" id="n1" [(ngModel)]="n1"><br>
+  <input type="text" id="n2" [(ngModel)]="n2"><br>
+  <input type="number"  id="res" [(ngModel)]="res"><br>
+  <button (click)="sumar()" id="btnSumar">sumar</button>
 </ion-content>
