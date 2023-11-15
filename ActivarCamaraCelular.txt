@@ -1,0 +1,10 @@
+descargar 
+https://www.dev47apps.com/droidcam/windows/
+
+instalar la app en el celular
+
+En celular:
+Activar modo desarrollador:
+tocar 7 veces en el nro de compilación
+
+y activar (modo desarrollador) depuración USB

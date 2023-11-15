@@ -3,5 +3,6 @@ npm install @capacitor/cli
 npm install @capacitor/android
 npx cap add android
 
---- ionic cap sync
+ionic build 
+ionic cap sync
 npx cap open android
