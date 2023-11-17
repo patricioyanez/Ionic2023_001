@@ -1,3 +1,6 @@
+Instalar android studio versión giraffe
+
+
 npm install  @capacitor/core
 npm install @capacitor/cli
 npm install @capacitor/android
@@ -6,3 +9,7 @@ npx cap add android
 ionic build 
 ionic cap sync
 npx cap open android
+
+
+Si Android Studio solicita buscar sdk la ruta aprox es:
+c:\User\nombreEquipo\AppData\Local\Android\sdk
