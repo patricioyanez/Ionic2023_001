@@ -3,7 +3,7 @@ Instalar android studio versión giraffe
 
 npm install  @capacitor/core
 npm install @capacitor/cli
-npm install @capacitor/android
+npm install @capacitor/android        o      npm install @capacitor/android --force
 npx cap add android
 
 ionic build 
@@ -13,3 +13,12 @@ npx cap open android
 
 Si Android Studio solicita buscar sdk la ruta aprox es:
 c:\User\nombreEquipo\AppData\Local\Android\sdk
+
+
+
+
+
+Si usa barcodescanner y da error "Could not find method compile" ir a:
+
+File -> project structure -> dependencies -> capacitor-cordova.android ->
+Dependecy : barcodescanner -> configuraction cambiar a implementation
