@@ -1,0 +1,8 @@
+
+pasos para instalar lector de QR:
+
+1-. ionic cordova plugin add phonegap-plugin-barcodescanner
+
+2-. npm install @ionic-native/barcode-scanner 
+si da error agregar --force
+npm install @ionic-native/barcode-scanner  -- force
