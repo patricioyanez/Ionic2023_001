@@ -14,19 +14,46 @@ npx cap open android
 Si Android Studio solicita buscar sdk la ruta aprox es:
 c:\User\nombreEquipo\AppData\Local\Android\sdk
 
-
-
-
-
 Si usa barcodescanner y da error "Could not find method compile" ir a:
 
 File -> project structure -> dependencies -> capacitor-cordova.android ->
 Dependecy : barcodescanner -> configuraction cambiar a implementation
 
-pasos para instalar lector de QR:
 
-1-. ionic cordova plugin add phonegap-plugin-barcodescanner
+Error al compilar en android por problemas de versión:
 
-2-. npm install @ionic-native/barcode-scanner 
-si da error agregar --force
-npm install @ionic-native/barcode-scanner  -- force
+" if (Build.VERSION.SDK_INT >= 30) {
+        return pm.getPackageInfo(packageName, (int) flags);"
+
+
+ARCHIVO COMPLETO:
+
+package com.getcapacitor.util;
+
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class InternalUtils {
+
+    public static PackageInfo getPackageInfo(PackageManager pm, String packageName) throws PackageManager.NameNotFoundException {
+        return InternalUtils.getPackageInfo(pm, packageName, 0);
+    }
+
+    public static PackageInfo getPackageInfo(PackageManager pm, String packageName, long flags)
+        throws PackageManager.NameNotFoundException {
+      if (Build.VERSION.SDK_INT >= 30) {
+        return pm.getPackageInfo(packageName, (int) flags);
+      } else {
+            return getPackageInfoLegacy(pm, packageName, (int) flags);
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private static PackageInfo getPackageInfoLegacy(PackageManager pm, String packageName, long flags)
+        throws PackageManager.NameNotFoundException {
+        return pm.getPackageInfo(packageName, (int) flags);
+    }
+}
